@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "./widgets/widgets_barrel.dart";
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -10,6 +11,14 @@ class RegistrationScreen extends StatefulWidget {
 class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+        child: Column(children: [
+          Form(
+            child: TextFormField(),
+          ),
+        ]),
+      ),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "./widgets/widgets_barrel.dart";
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -14,8 +15,9 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Form(
-              child: TextFormField(),
+            Image.asset("assets/logo.jpeg"),
+            const SizedBox(
+              height: 40,
             ),
           ],
         ),
