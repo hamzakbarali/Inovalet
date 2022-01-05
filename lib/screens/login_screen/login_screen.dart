@@ -12,10 +12,13 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
-            Image.asset("assets/logo.jpeg"),
+            Form(
+              child: TextFormField(),
+            ),
             const SizedBox(
               height: 40,
             ),
