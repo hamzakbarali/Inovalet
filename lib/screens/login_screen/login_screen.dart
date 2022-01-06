@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Center(
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 7),
-                height: screenSize.height * 0.5,
+                height: screenSize.height * 0.45,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -97,7 +97,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         obscure: true,
                       ),
                       SizedBox(
-                        height: screenSize.height * 0.03,
+                        height: screenSize.height * 0.045,
+                      ),
+                      SizedBox(
+                        height: screenSize.height * 0.045,
+                        width: screenSize.width * 0.3,
+                        child: SubmitBtn(
+                          size: screenSize,
+                        ),
                       ),
                     ],
                   ),

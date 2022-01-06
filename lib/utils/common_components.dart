@@ -71,3 +71,43 @@ class InputField extends StatelessWidget {
     );
   }
 }
+
+class SubmitBtn extends StatelessWidget {
+  late final Size size;
+
+  SubmitBtn({required this.size, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      style: TextButton.styleFrom(
+        elevation: 2,
+        shadowColor: brownColor,
+        backgroundColor: brownShade,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        textStyle: GoogleFonts.lora(
+          textStyle: TextStyle(
+            color: brownColor,
+            letterSpacing: 2,
+            fontSize: size.height * 0.020,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      onPressed: () {},
+      child: Text(
+        "Submit",
+        style: GoogleFonts.lora(
+          textStyle: TextStyle(
+            letterSpacing: 2,
+            color: Colors.white,
+            fontSize: size.height * 0.020,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+}

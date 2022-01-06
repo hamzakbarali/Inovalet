@@ -61,7 +61,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             child: Center(
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 7),
-                height: screenSize.height * 0.7,
+                height: screenSize.height * 0.55,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -111,7 +111,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         obscure: true,
                       ),
                       SizedBox(
-                        height: screenSize.height * 0.03,
+                        height: screenSize.height * 0.045,
+                      ),
+                      SizedBox(
+                        height: screenSize.height * 0.045,
+                        width: screenSize.width * 0.3,
+                        child: SubmitBtn(
+                          size: screenSize,
+                        ),
                       ),
                     ],
                   ),
