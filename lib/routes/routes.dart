@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import 'package:inovalet/screens/contactus_screen/contacus_screen.dart';
+import 'package:inovalet/screens/contactus_screen/contactus_screen.dart';
 import "../screens/screens_barrel.dart";
 
 class RouteGenerator {
