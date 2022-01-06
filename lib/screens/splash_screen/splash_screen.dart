@@ -38,19 +38,22 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Shimmer(
         color: brownColor,
         child: SafeArea(
-          child: Center(
-            child: Transform.rotate(
-              angle: -pi / 8.0,
-              child: AnimatedTextKit(
-                repeatForever: true,
-                animatedTexts: [
-                  FlickerAnimatedText(
-                    "Inovalet",
-                    speed: const Duration(milliseconds: 2000),
-                    textStyle: splashscreenHeadingTextTheme.bodyText1!
-                        .copyWith(color: brownColor),
-                  ),
-                ],
+          child: Container(
+            decoration: bg_image,
+            child: Center(
+              child: Transform.rotate(
+                angle: -pi / 8.0,
+                child: AnimatedTextKit(
+                  repeatForever: true,
+                  animatedTexts: [
+                    FlickerAnimatedText(
+                      "Inovalet",
+                      speed: const Duration(milliseconds: 2000),
+                      textStyle: splashscreenHeadingTextTheme.bodyText1!
+                          .copyWith(color: brownColor),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import "package:flutter/material.dart";
 import 'package:inovalet/utils/colors.dart';
+import 'package:inovalet/utils/utils_barrel.dart';
 import "../../utils/themes.dart";
 import "./widgets/widgets_barrel.dart";
 import "../../routes/routes.dart";
@@ -12,9 +13,10 @@ class DefaultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.brown[50],
+      backgroundColor: brown50,
       body: SafeArea(
-        child: SizedBox(
+        child: Container(
+          decoration: bg_image,
           height: screenSize.height,
           width: screenSize.width,
           child: Center(

@@ -27,8 +27,8 @@ class Btn extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           textStyle: GoogleFonts.lora(
-            textStyle: const TextStyle(
-              color: Colors.white,
+            textStyle: TextStyle(
+              color: brownColor,
               letterSpacing: 2,
               fontSize: 20,
               fontWeight: FontWeight.bold,

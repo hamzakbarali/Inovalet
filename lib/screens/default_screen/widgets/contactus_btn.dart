@@ -23,7 +23,7 @@ class ContactUsBtn extends StatelessWidget {
           textStyle: TextStyle(
             letterSpacing: 2,
             color: brownColor,
-            fontSize: 12,
+            fontSize: 13,
             fontWeight: FontWeight.bold,
           ),
         ),
