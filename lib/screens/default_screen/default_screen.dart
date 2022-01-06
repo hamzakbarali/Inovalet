@@ -12,7 +12,7 @@ class DefaultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.brown[50],
       body: SafeArea(
         child: SizedBox(
           height: screenSize.height,
@@ -45,9 +45,25 @@ class DefaultScreen extends StatelessWidget {
                       height: constraints.maxHeight * 0.03,
                     ),
                     Btn(
-                        text: "Register",
+                        text: "Signup",
                         routeName: RouteGenerator.registrationscreenRoute,
-                        size: screenSize)
+                        size: screenSize),
+                    SizedBox(
+                      height: constraints.maxHeight * 0.03,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ContactUsBtn(
+                          text: "Contact Us",
+                          routeName: RouteGenerator.contactusscreenRoute,
+                          size: screenSize,
+                        ),
+                        SizedBox(
+                          width: screenSize.width * 0.1,
+                        ),
+                      ],
+                    ),
                   ],
                 );
               },

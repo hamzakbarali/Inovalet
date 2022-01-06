@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
     _transition(context);
 
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: brown50,
       body: Shimmer(
         color: brownColor,
         child: SafeArea(
