@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import "package:flutter/material.dart";
+import 'package:inovalet/utils/colors.dart';
 import "../../utils/themes.dart";
 import "./widgets/widgets_barrel.dart";
 import "../../routes/routes.dart";
@@ -28,7 +29,8 @@ class DefaultScreen extends StatelessWidget {
                         speed: const Duration(milliseconds: 70),
                         textStyle:
                             defaultscreenHeadingTextTheme.bodyText1?.copyWith(
-                          fontSize: constraints.maxWidth * 0.12,
+                          fontSize: constraints.maxWidth * 0.13,
+                          color: brownColor,
                         ),
                       )
                     ]),

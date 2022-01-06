@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "../../../utils/utils_barrel.dart";
+import "package:google_fonts/google_fonts.dart";
 
 class Btn extends StatelessWidget {
   late final String text;
@@ -15,23 +17,31 @@ class Btn extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: size.width * 0.8,
-      height: size.height * 0.05,
+      height: size.height * 0.055,
       child: TextButton(
         style: TextButton.styleFrom(
-          backgroundColor: Colors.tealAccent,
+          backgroundColor: pinkColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          textStyle: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
+          textStyle: GoogleFonts.lora(
+            textStyle: const TextStyle(
+              color: Colors.white,
+              letterSpacing: 2,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         child: Text(
           text,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
+          style: GoogleFonts.lora(
+            textStyle: TextStyle(
+              letterSpacing: 2,
+              color: brownColor,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         onPressed: () {
