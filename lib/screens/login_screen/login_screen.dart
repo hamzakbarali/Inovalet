@@ -38,7 +38,26 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Container(
             decoration: bg_image,
             child: Center(
-              child: Container(),
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 5),
+                height: screenSize.height * 0.5,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.brown.shade400,
+                      offset: const Offset(5, 5),
+                      blurRadius: 15,
+                    ),
+                    BoxShadow(
+                      color: brownShade,
+                      offset: const Offset(-5, -5),
+                      blurRadius: 15,
+                    ),
+                  ],
+                  color: brownColor,
+                  borderRadius: BorderRadius.circular(40),
+                ),
+              ),
             ),
           ),
         ),
