@@ -17,7 +17,7 @@ class Btn extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: size.width * 0.8,
-      height: size.height * 0.055,
+      height: size.height * 0.060,
       child: TextButton(
         style: TextButton.styleFrom(
           elevation: 2,
@@ -30,7 +30,7 @@ class Btn extends StatelessWidget {
             textStyle: TextStyle(
               color: brownColor,
               letterSpacing: 2,
-              fontSize: 20,
+              fontSize: size.height * 0.025,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -41,7 +41,7 @@ class Btn extends StatelessWidget {
             textStyle: TextStyle(
               letterSpacing: 2,
               color: brownColor,
-              fontSize: 20,
+              fontSize: size.height * 0.025,
               fontWeight: FontWeight.bold,
             ),
           ),

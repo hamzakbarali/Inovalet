@@ -37,9 +37,8 @@ class _LoginScreenState extends State<LoginScreen> {
           height: screenSize.height,
           child: Container(
             decoration: bg_image,
-            child: const Text(
-              "He",
-              style: TextStyle(color: Colors.white, fontSize: 40),
+            child: Center(
+              child: Container(),
             ),
           ),
         ),
