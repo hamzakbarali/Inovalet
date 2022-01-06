@@ -34,9 +34,9 @@ class _SplashScreenState extends State<SplashScreen> {
     _transition(context);
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[200],
       body: Shimmer(
-        color: Colors.blueAccent,
+        color: brownColor,
         child: SafeArea(
           child: Center(
             child: Transform.rotate(
@@ -47,7 +47,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   FlickerAnimatedText(
                     "Inovalet",
                     speed: const Duration(milliseconds: 2000),
-                    textStyle: splashscreenHeadingTextTheme.bodyText1,
+                    textStyle: splashscreenHeadingTextTheme.bodyText1!
+                        .copyWith(color: brownColor),
                   ),
                 ],
               ),
