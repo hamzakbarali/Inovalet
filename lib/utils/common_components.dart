@@ -1,7 +1,13 @@
 import "package:flutter/material.dart";
-import 'package:flutter/services.dart';
 import "package:google_fonts/google_fonts.dart";
 import "../../../utils/utils_barrel.dart";
+
+BoxDecoration bg_image = const BoxDecoration(
+  image: DecorationImage(
+    fit: BoxFit.cover,
+    image: AssetImage("assets/common_bg_image.jpg"),
+  ),
+);
 
 class InputField extends StatelessWidget {
   late final Size size;

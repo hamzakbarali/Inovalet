@@ -1,6 +1,4 @@
 import "package:flutter/material.dart";
-import "./widgets/widgets_barrel.dart";
-import "package:google_fonts/google_fonts.dart";
 import "../../utils/utils_barrel.dart";
 
 class LoginScreen extends StatefulWidget {
@@ -13,12 +11,14 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   late final TextEditingController _usernameController;
   late final TextEditingController _passwordController;
+  late final _formKey;
 
   @override
   void initState() {
     super.initState();
     _usernameController = TextEditingController();
     _passwordController = TextEditingController();
+    _formKey = GlobalKey<FormState>();
   }
 
   @override
@@ -77,7 +77,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: Form(
+                  key: _formKey,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       InputField(
@@ -93,6 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         controller: this._passwordController,
                         hint: "Password",
                         obscure: true,
+                      ),
+                      SizedBox(
+                        height: screenSize.height * 0.03,
                       ),
                     ],
                   ),
