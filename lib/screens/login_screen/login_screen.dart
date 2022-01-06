@@ -11,6 +11,23 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  late final TextEditingController _usernameController;
+  late final TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    super.initState();
+    _usernameController = TextEditingController();
+    _passwordController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _usernameController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -39,23 +56,46 @@ class _LoginScreenState extends State<LoginScreen> {
             decoration: bg_image,
             child: Center(
               child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 5),
+                margin: const EdgeInsets.symmetric(horizontal: 7),
                 height: screenSize.height * 0.5,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
                       color: Colors.brown.shade400,
-                      offset: const Offset(5, 5),
+                      offset: const Offset(4, 4),
+                      spreadRadius: 1,
                       blurRadius: 15,
                     ),
                     BoxShadow(
-                      color: brownShade,
-                      offset: const Offset(-5, -5),
+                      spreadRadius: 1,
+                      color: pinkColor,
+                      offset: const Offset(-4, -4),
                       blurRadius: 15,
                     ),
                   ],
                   color: brownColor,
                   borderRadius: BorderRadius.circular(40),
+                ),
+                child: Form(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InputField(
+                        size: screenSize,
+                        controller: this._usernameController,
+                        hint: "Username",
+                      ),
+                      SizedBox(
+                        height: screenSize.height * 0.03,
+                      ),
+                      InputField(
+                        size: screenSize,
+                        controller: this._passwordController,
+                        hint: "Password",
+                        obscure: true,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
