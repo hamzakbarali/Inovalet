@@ -34,23 +34,26 @@ class _SplashScreenState extends State<SplashScreen> {
     _transition(context);
 
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: brown50,
       body: Shimmer(
         color: brownColor,
         child: SafeArea(
-          child: Center(
-            child: Transform.rotate(
-              angle: -pi / 8.0,
-              child: AnimatedTextKit(
-                repeatForever: true,
-                animatedTexts: [
-                  FlickerAnimatedText(
-                    "Inovalet",
-                    speed: const Duration(milliseconds: 2000),
-                    textStyle: splashscreenHeadingTextTheme.bodyText1!
-                        .copyWith(color: brownColor),
-                  ),
-                ],
+          child: Container(
+            decoration: bg_image,
+            child: Center(
+              child: Transform.rotate(
+                angle: -pi / 8.0,
+                child: AnimatedTextKit(
+                  repeatForever: true,
+                  animatedTexts: [
+                    FlickerAnimatedText(
+                      "Inovalet",
+                      speed: const Duration(milliseconds: 2000),
+                      textStyle: splashscreenHeadingTextTheme.bodyText1!
+                          .copyWith(color: brownColor),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

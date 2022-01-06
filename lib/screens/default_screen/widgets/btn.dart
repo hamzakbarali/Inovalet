@@ -20,13 +20,15 @@ class Btn extends StatelessWidget {
       height: size.height * 0.055,
       child: TextButton(
         style: TextButton.styleFrom(
+          elevation: 2,
+          shadowColor: brownColor,
           backgroundColor: pinkColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
           textStyle: GoogleFonts.lora(
-            textStyle: const TextStyle(
-              color: Colors.white,
+            textStyle: TextStyle(
+              color: brownColor,
               letterSpacing: 2,
               fontSize: 20,
               fontWeight: FontWeight.bold,

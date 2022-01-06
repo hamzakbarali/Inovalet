@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import "package:flutter/material.dart";
 import 'package:inovalet/utils/colors.dart';
+import 'package:inovalet/utils/utils_barrel.dart';
 import "../../utils/themes.dart";
 import "./widgets/widgets_barrel.dart";
 import "../../routes/routes.dart";
@@ -12,9 +13,10 @@ class DefaultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: brown50,
       body: SafeArea(
-        child: SizedBox(
+        child: Container(
+          decoration: bg_image,
           height: screenSize.height,
           width: screenSize.width,
           child: Center(
@@ -45,9 +47,25 @@ class DefaultScreen extends StatelessWidget {
                       height: constraints.maxHeight * 0.03,
                     ),
                     Btn(
-                        text: "Register",
+                        text: "Signup",
                         routeName: RouteGenerator.registrationscreenRoute,
-                        size: screenSize)
+                        size: screenSize),
+                    SizedBox(
+                      height: constraints.maxHeight * 0.03,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ContactUsBtn(
+                          text: "Contact Us",
+                          routeName: RouteGenerator.contactusscreenRoute,
+                          size: screenSize,
+                        ),
+                        SizedBox(
+                          width: screenSize.width * 0.1,
+                        ),
+                      ],
+                    ),
                   ],
                 );
               },
