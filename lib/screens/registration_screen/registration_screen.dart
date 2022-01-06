@@ -10,22 +10,25 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
-  late final TextEditingController _usernameController;
   late final TextEditingController _passwordController;
+  late final TextEditingController _nameController;
+  late final TextEditingController _emailController;
   late final _formKey;
 
   @override
   void initState() {
     super.initState();
-    _usernameController = TextEditingController();
+    _emailController = TextEditingController();
     _passwordController = TextEditingController();
+    _nameController = TextEditingController();
     _formKey = GlobalKey<FormState>();
   }
 
   @override
   void dispose() {
-    _usernameController.dispose();
+    _emailController.dispose();
     _passwordController.dispose();
+    _nameController.dispose();
     super.dispose();
   }
 
@@ -42,7 +45,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         ),
         backgroundColor: brownColor,
         title: Row(children: [
-          Text("Login", style: loginscreenAppBarTitleStyle),
+          Text("Signup", style: loginscreenAppBarTitleStyle),
           const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: Icon(Icons.directions_car))
@@ -54,22 +57,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           width: screenSize.width,
           height: screenSize.height,
           child: Container(
-            decoration: bg_image,
+            decoration: signupscreen_bg_image,
             child: Center(
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 7),
-                height: screenSize.height * 0.5,
+                height: screenSize.height * 0.7,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.brown.shade400,
+                      color: Colors.grey.shade500,
                       offset: const Offset(4, 4),
                       spreadRadius: 1,
                       blurRadius: 15,
                     ),
                     BoxShadow(
                       spreadRadius: 1,
-                      color: pinkColor,
+                      color: Colors.grey.shade400,
                       offset: const Offset(-4, -4),
                       blurRadius: 15,
                     ),
@@ -85,8 +88,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     children: [
                       InputField(
                         size: screenSize,
-                        controller: this._usernameController,
-                        hint: "Username",
+                        controller: this._nameController,
+                        hint: "Name",
+                        inputType: TextInputType.name,
+                      ),
+                      SizedBox(
+                        height: screenSize.height * 0.03,
+                      ),
+                      InputField(
+                        size: screenSize,
+                        controller: this._emailController,
+                        hint: "Email",
+                        inputType: TextInputType.emailAddress,
                       ),
                       SizedBox(
                         height: screenSize.height * 0.03,

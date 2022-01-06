@@ -9,21 +9,21 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  late final TextEditingController _usernameController;
+  late final TextEditingController _emailController;
   late final TextEditingController _passwordController;
   late final _formKey;
 
   @override
   void initState() {
     super.initState();
-    _usernameController = TextEditingController();
+    _emailController = TextEditingController();
     _passwordController = TextEditingController();
     _formKey = GlobalKey<FormState>();
   }
 
   @override
   void dispose() {
-    _usernameController.dispose();
+    _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
           width: screenSize.width,
           height: screenSize.height,
           child: Container(
-            decoration: bg_image,
+            decoration: common_bg_image,
             child: Center(
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 7),
@@ -61,14 +61,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.brown.shade400,
+                      color: Colors.grey.shade500,
                       offset: const Offset(4, 4),
                       spreadRadius: 1,
                       blurRadius: 15,
                     ),
                     BoxShadow(
                       spreadRadius: 1,
-                      color: pinkColor,
+                      color: Colors.grey.shade400,
                       offset: const Offset(-4, -4),
                       blurRadius: 15,
                     ),
@@ -84,8 +84,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       InputField(
                         size: screenSize,
-                        controller: this._usernameController,
-                        hint: "Username",
+                        controller: this._emailController,
+                        hint: "Email",
                       ),
                       SizedBox(
                         height: screenSize.height * 0.03,

@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
         color: brownColor,
         child: SafeArea(
           child: Container(
-            decoration: bg_image,
+            decoration: common_bg_image,
             child: Center(
               child: Transform.rotate(
                 angle: -pi / 8.0,

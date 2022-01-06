@@ -14,7 +14,7 @@ class DefaultScreen extends StatelessWidget {
       backgroundColor: brown50,
       body: SafeArea(
         child: Container(
-          decoration: bg_image,
+          decoration: common_bg_image,
           height: screenSize.height,
           width: screenSize.width,
           child: Center(

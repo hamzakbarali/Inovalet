@@ -2,10 +2,17 @@ import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 import "../../../utils/utils_barrel.dart";
 
-BoxDecoration bg_image = const BoxDecoration(
+BoxDecoration common_bg_image = const BoxDecoration(
   image: DecorationImage(
     fit: BoxFit.cover,
     image: AssetImage("assets/common_bg_image.jpg"),
+  ),
+);
+
+BoxDecoration signupscreen_bg_image = const BoxDecoration(
+  image: DecorationImage(
+    fit: BoxFit.cover,
+    image: AssetImage("assets/signupscreen_bg.jpg"),
   ),
 );
 
@@ -14,12 +21,14 @@ class InputField extends StatelessWidget {
   late final TextEditingController controller;
   late final bool obscure;
   late final String hint;
+  late final TextInputType inputType;
 
   InputField(
       {required this.size,
       required this.controller,
       required this.hint,
       this.obscure = false,
+      this.inputType = TextInputType.text,
       Key? key})
       : super(key: key);
 
