@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "409977329142",
+    "project_id": "inovalet-c7d67",
+    "storage_bucket": "inovalet-c7d67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409977329142:android:7ddfe3aec6ed86834da3d7",
+        "android_client_info": {
+          "package_name": "com.hamzakbarali.inovalet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409977329142-oil4im056rreph4t3p1nne35c97eh51c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeEuzJJLDExHHfR_rYA9BpaI9Ko5YDjXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409977329142-oil4im056rreph4t3p1nne35c97eh51c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
