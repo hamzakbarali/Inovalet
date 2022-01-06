@@ -51,7 +51,7 @@ class DefaultScreen extends StatelessWidget {
                         routeName: RouteGenerator.registrationscreenRoute,
                         size: screenSize),
                     SizedBox(
-                      height: constraints.maxHeight * 0.03,
+                      height: constraints.maxHeight * 0.02,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
