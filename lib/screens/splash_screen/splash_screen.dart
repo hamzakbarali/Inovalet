@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _transition(BuildContext ctx) async {
     await Future.delayed(const Duration(seconds: 6), () {
-      Navigator.pushReplacementNamed(ctx, RouteGenerator.loginscreenRoute);
+      Navigator.pushReplacementNamed(ctx, RouteGenerator.defaultscreenRoute);
     });
   }
 
@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   FlickerAnimatedText(
                     "Inovalet",
                     speed: const Duration(milliseconds: 2000),
-                    textStyle: splashscreenTextTheme.bodyText1,
+                    textStyle: splashscreenHeadingTextTheme.bodyText1,
                   ),
                 ],
               ),
