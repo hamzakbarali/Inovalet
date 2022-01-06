@@ -11,18 +11,25 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Column(
-          children: [
-            Form(
-              child: TextFormField(),
+        child: SizedBox(
+          height: screenHeight,
+          child: Center(
+            child: Column(
+              children: [
+                Form(
+                  child: TextFormField(),
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+              ],
             ),
-            const SizedBox(
-              height: 40,
-            ),
-          ],
+          ),
         ),
       ),
     );
