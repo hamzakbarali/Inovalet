@@ -1,20 +1,6 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
-import "../../../utils/utils_barrel.dart";
-
-BoxDecoration common_bg_image = const BoxDecoration(
-  image: DecorationImage(
-    fit: BoxFit.cover,
-    image: AssetImage("assets/common_bg_image.jpg"),
-  ),
-);
-
-BoxDecoration signupscreen_bg_image = const BoxDecoration(
-  image: DecorationImage(
-    fit: BoxFit.cover,
-    image: AssetImage("assets/signupscreen_bg.jpg"),
-  ),
-);
+import "../utils/utils_barrel.dart";
 
 class InputField extends StatelessWidget {
   late final Size size;
@@ -53,9 +39,9 @@ class InputField extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(20))),
           enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          fillColor: brownLightShade,
-          focusColor: brownLightShade,
-          hoverColor: brownLightShade,
+          fillColor: Colors.grey.shade200,
+          focusColor: Colors.grey.shade200,
+          hoverColor: Colors.grey.shade200,
         ),
         controller: this.controller,
         obscureText: obscure,
@@ -68,46 +54,6 @@ class InputField extends StatelessWidget {
         ),
       ),
       margin: EdgeInsets.symmetric(horizontal: size.width * 0.04),
-    );
-  }
-}
-
-class SubmitBtn extends StatelessWidget {
-  late final Size size;
-
-  SubmitBtn({required this.size, Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      style: TextButton.styleFrom(
-        elevation: 2,
-        shadowColor: brownColor,
-        backgroundColor: brownShade,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        textStyle: GoogleFonts.lora(
-          textStyle: TextStyle(
-            color: brownColor,
-            letterSpacing: 2,
-            fontSize: size.height * 0.020,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-      onPressed: () {},
-      child: Text(
-        "Submit",
-        style: GoogleFonts.lora(
-          textStyle: TextStyle(
-            letterSpacing: 2,
-            color: Colors.white,
-            fontSize: size.height * 0.020,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
     );
   }
 }

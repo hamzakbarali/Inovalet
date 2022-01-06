@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import 'package:inovalet/utils/utils_barrel.dart';
 import "./widgets/widgets_barrel.dart";
 import "../../routes/routes.dart";
+import "../../common_components/commoncomp_barrel.dart";
 
 class DefaultScreen extends StatelessWidget {
   const DefaultScreen({Key? key}) : super(key: key);
