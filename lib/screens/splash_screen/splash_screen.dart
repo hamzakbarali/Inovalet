@@ -4,6 +4,7 @@ import "dart:math";
 import 'package:animated_text_kit/animated_text_kit.dart';
 import "../../routes/routes.dart";
 import "../../utils/utils_barrel.dart";
+import "../../common_components/commoncomp_barrel.dart";
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -39,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
         color: brownColor,
         child: SafeArea(
           child: Container(
-            decoration: bg_image,
+            decoration: common_bg_image,
             child: Center(
               child: Transform.rotate(
                 angle: -pi / 8.0,

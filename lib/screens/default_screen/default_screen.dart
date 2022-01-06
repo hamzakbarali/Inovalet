@@ -1,10 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import "package:flutter/material.dart";
-import 'package:inovalet/utils/colors.dart';
 import 'package:inovalet/utils/utils_barrel.dart';
-import "../../utils/themes.dart";
 import "./widgets/widgets_barrel.dart";
 import "../../routes/routes.dart";
+import "../../common_components/commoncomp_barrel.dart";
 
 class DefaultScreen extends StatelessWidget {
   const DefaultScreen({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class DefaultScreen extends StatelessWidget {
       backgroundColor: brown50,
       body: SafeArea(
         child: Container(
-          decoration: bg_image,
+          decoration: common_bg_image,
           height: screenSize.height,
           width: screenSize.width,
           child: Center(
