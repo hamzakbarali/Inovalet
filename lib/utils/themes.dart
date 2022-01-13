@@ -19,7 +19,7 @@ TextTheme defaultscreenHeadingTextTheme = TextTheme(
   ),
 );
 
-TextStyle loginscreenAppBarTitleStyle = GoogleFonts.lora(
+TextStyle commonAppBarTitleStyle = GoogleFonts.lora(
   textStyle: const TextStyle(
     color: Colors.white,
   ),

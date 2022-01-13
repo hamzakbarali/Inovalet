@@ -42,72 +42,73 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         backgroundColor: brownColor,
         title: Row(children: [
-          Text("Login", style: loginscreenAppBarTitleStyle),
+          Text("Login", style: commonAppBarTitleStyle),
           const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: Icon(Icons.directions_car))
         ]),
         actions: const [],
       ),
-      body: SafeArea(
-        child: SizedBox(
-          width: screenSize.width,
-          height: screenSize.height,
-          child: Container(
-            decoration: common_bg_image,
-            child: Center(
-              child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 7),
-                height: screenSize.height * 0.45,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade500,
-                      offset: const Offset(4, 4),
-                      spreadRadius: 1,
-                      blurRadius: 15,
-                    ),
-                    BoxShadow(
-                      spreadRadius: 1,
-                      color: Colors.grey.shade400,
-                      offset: const Offset(-4, -4),
-                      blurRadius: 15,
-                    ),
-                  ],
-                  color: brownColor,
-                  borderRadius: BorderRadius.circular(40),
-                ),
-                child: Form(
-                  key: _formKey,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      InputField(
-                        size: screenSize,
-                        controller: this._emailController,
-                        hint: "Email",
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: SizedBox(
+            width: screenSize.width,
+            height: screenSize.height,
+            child: Container(
+              decoration: common_bg_image,
+              child: Center(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 7),
+                  height: screenSize.height * 0.50,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade500,
+                        offset: const Offset(4, 4),
+                        spreadRadius: 1,
+                        blurRadius: 15,
                       ),
-                      SizedBox(
-                        height: screenSize.height * 0.03,
-                      ),
-                      InputField(
-                        size: screenSize,
-                        controller: this._passwordController,
-                        hint: "Password",
-                        obscure: true,
-                      ),
-                      SizedBox(
-                        height: screenSize.height * 0.045,
-                      ),
-                      SizedBox(
-                        height: screenSize.height * 0.045,
-                        width: screenSize.width * 0.3,
-                        child: SubmitBtn(
-                          size: screenSize,
-                        ),
+                      BoxShadow(
+                        spreadRadius: 1,
+                        color: Colors.grey.shade400,
+                        offset: const Offset(-4, -4),
+                        blurRadius: 15,
                       ),
                     ],
+                    color: brownColor,
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InputField(
+                            size: screenSize,
+                            controller: _emailController,
+                            hint: "Email",
+                            inputType: TextInputType.emailAddress),
+                        SizedBox(
+                          height: screenSize.height * 0.045,
+                        ),
+                        InputField(
+                          size: screenSize,
+                          controller: _passwordController,
+                          hint: "Password",
+                          obscure: true,
+                        ),
+                        SizedBox(
+                          height: screenSize.height * 0.045,
+                        ),
+                        SizedBox(
+                          width: screenSize.width * 0.3,
+                          child: SubmitBtn(
+                            size: screenSize,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

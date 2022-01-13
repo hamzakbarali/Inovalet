@@ -21,6 +21,7 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: size.height * 0.08,
       child: TextFormField(
         cursorColor: brownColor,
         decoration: InputDecoration(
@@ -28,6 +29,7 @@ class InputField extends StatelessWidget {
           hintStyle: GoogleFonts.lora(
             textStyle: const TextStyle(
               fontSize: 13,
+              wordSpacing: 0.5,
             ),
           ),
           filled: true,
@@ -43,7 +45,7 @@ class InputField extends StatelessWidget {
           focusColor: Colors.grey.shade200,
           hoverColor: Colors.grey.shade200,
         ),
-        controller: this.controller,
+        controller: controller,
         obscureText: obscure,
         style: GoogleFonts.lora(
           textStyle: TextStyle(
