@@ -137,7 +137,7 @@ class ContacUsScreen extends StatelessWidget {
                         SizedBox(
                           width: 50,
                           child: Icon(
-                            Icons.add_road,
+                            Icons.map_outlined,
                             color: Colors.grey.shade200,
                           ),
                         ),

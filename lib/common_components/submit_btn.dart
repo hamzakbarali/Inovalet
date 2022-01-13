@@ -13,7 +13,7 @@ class SubmitBtn extends StatelessWidget {
       style: TextButton.styleFrom(
         elevation: 2,
         shadowColor: brownColor,
-        backgroundColor: Colors.grey.shade200,
+        backgroundColor: brownShade,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
