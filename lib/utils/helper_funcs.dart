@@ -28,10 +28,9 @@ bool validateLogin(String email, String password) {
       null;
 }
 
-void login(String email, String password, String route, BuildContext context,
-    dynamic args) {
+void login(String email, String password, String route, BuildContext context) {
   if (!validateLogin(email, password)) {
-    Navigator.pushReplacementNamed(context, route, arguments: args);
+    Navigator.pushReplacementNamed(context, route, arguments: email);
   }
 }
 

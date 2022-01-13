@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 _emailController.text,
                                 _passwordController.text,
                                 RouteGenerator.homescreenRoute,
-                                context, {}),
+                                context),
                           ),
                         ),
                       ],

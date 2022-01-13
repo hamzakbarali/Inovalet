@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     final args = ModalRoute.of(context)!.settings.arguments;
-
+    print(args);
     return Scaffold(
       body: SafeArea(
         child: SizedBox(
@@ -19,7 +19,10 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  child: Image.asset("assets/abd.jpg"),
+                  child: Image.asset(
+                    "assets/abd.jpg",
+                    fit: BoxFit.cover,
+                  ),
                   radius: 10,
                 )
               ],

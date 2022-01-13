@@ -13,17 +13,23 @@ class RouteGenerator {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case splashscreenRoute:
-        return MaterialPageRoute(builder: (_) => const SplashScreen());
+        return MaterialPageRoute(
+            builder: (_) => const SplashScreen(), settings: settings);
       case defaultscreenRoute:
-        return MaterialPageRoute(builder: (_) => const DefaultScreen());
+        return MaterialPageRoute(
+            builder: (_) => const DefaultScreen(), settings: settings);
       case loginscreenRoute:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(
+            builder: (_) => const LoginScreen(), settings: settings);
       case registrationscreenRoute:
-        return MaterialPageRoute(builder: (_) => const RegistrationScreen());
+        return MaterialPageRoute(
+            builder: (_) => const RegistrationScreen(), settings: settings);
       case contactusscreenRoute:
-        return MaterialPageRoute(builder: (_) => const ContacUsScreen());
+        return MaterialPageRoute(
+            builder: (_) => const ContacUsScreen(), settings: settings);
       case homescreenRoute:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return MaterialPageRoute(
+            builder: (_) => const HomeScreen(), settings: settings);
       default:
         throw const FormatException("Invalid Route");
     }
