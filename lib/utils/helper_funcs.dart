@@ -30,7 +30,12 @@ bool validateLogin(String email, String password) {
 
 void login(String email, String password, String route, BuildContext context) {
   if (!validateLogin(email, password)) {
-    Navigator.pushReplacementNamed(context, route, arguments: email);
+    User? user = users.firstWhereOrNull((element) {
+      return element.email == email && element.password == password
+    });
+    if(user != null) {
+      Navigator.pushReplacementNamed(context, route, arguments: user.id);
+    }
   }
 }
 
