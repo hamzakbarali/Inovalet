@@ -8,6 +8,7 @@ class RouteGenerator {
   static const String contactusscreenRoute = "/contact-us";
   static const String defaultscreenRoute = "/default";
   static const String registrationscreenRoute = "/registration";
+  static const String homescreenRoute = "/home";
 
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -21,6 +22,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const RegistrationScreen());
       case contactusscreenRoute:
         return MaterialPageRoute(builder: (_) => const ContacUsScreen());
+      case homescreenRoute:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         throw const FormatException("Invalid Route");
     }

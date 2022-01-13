@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
-import "./widgets/widgets_barrel.dart";
 import "../../utils/utils_barrel.dart";
 import "../../common_components/commoncomp_barrel.dart";
+import "../../models/models_barrel.dart";
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
