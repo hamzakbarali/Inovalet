@@ -16,48 +16,4 @@ class User {
       required this.carNum}) {
     id = const Uuid().v4();
   }
-
-  bool validateName(String name) {
-    if (name.length < 4) {
-      return false;
-    }
-    return true;
-  }
-
-  bool validateEmail(String email) {
-    if (email.length < 8) {
-      return false;
-    } else if (!email.contains('@')) {
-      return false;
-    } else if (!email.contains(".com")) {
-      return false;
-    } else {
-      return true;
-    }
-  }
-
-  bool validatePassword(String password) {
-    if (password.length < 6) {
-      return false;
-    }
-    return true;
-  }
-
-  bool validatePhone(String num) {
-    if (num.length < 11) {
-      return false;
-    }
-    return true;
-  }
-
-  bool validateCar(String num) {
-    if (num.length < 6) {
-      return false;
-    }
-    return true;
-  }
-
-  bool validateLogin(String email, String password) {
-    return true;
-  }
 }

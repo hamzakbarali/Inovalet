@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "../../utils/utils_barrel.dart";
 import "../../common_components/commoncomp_barrel.dart";
+import "../../routes/routes.dart";
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -105,7 +106,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           width: screenSize.width * 0.3,
                           child: SubmitBtn(
                             size: screenSize,
-                            onPress: () {},
+                            onPress: () => login(
+                                _emailController.text,
+                                _passwordController.text,
+                                RouteGenerator.homescreenRoute,
+                                context, {}),
                           ),
                         ),
                       ],

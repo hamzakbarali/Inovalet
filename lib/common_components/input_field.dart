@@ -29,7 +29,7 @@ class InputField extends StatelessWidget {
           hintStyle: GoogleFonts.lora(
             textStyle: const TextStyle(
               fontSize: 13,
-              wordSpacing: 0.5,
+              wordSpacing: 0.1,
             ),
           ),
           filled: true,

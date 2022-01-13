@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "../../utils/utils_barrel.dart";
 import "../../common_components/commoncomp_barrel.dart";
-import "../../models/models_barrel.dart";
+import "../../routes/routes.dart";
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -143,7 +143,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           width: screenSize.width * 0.3,
                           child: SubmitBtn(
                             size: screenSize,
-                            onPress: () {},
+                            onPress: () => createUser(
+                                _nameController.text,
+                                _emailController.text,
+                                _passwordController.text,
+                                _phonenumController.text,
+                                _carnumController.text,
+                                RouteGenerator.loginscreenRoute,
+                                context),
                           ),
                         ),
                       ],
