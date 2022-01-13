@@ -105,6 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           width: screenSize.width * 0.3,
                           child: SubmitBtn(
                             size: screenSize,
+                            onPress: () {},
                           ),
                         ),
                       ],

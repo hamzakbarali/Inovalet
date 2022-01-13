@@ -143,6 +143,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           width: screenSize.width * 0.3,
                           child: SubmitBtn(
                             size: screenSize,
+                            onPress: () {},
                           ),
                         ),
                       ],

@@ -2,9 +2,9 @@ import "../models/models_barrel.dart";
 
 List<User> users = [
   User(
-      name: "Hamza",
-      email: "hamzakbarali@gmail.com",
-      password: "123",
-      phoneNum: "03353114222",
+      name: "Abdullah Naeem",
+      email: "abdullahnaim@hotmail.com",
+      password: "123abc",
+      phoneNum: "03343451077",
       carNum: "123-abc")
 ];

@@ -17,13 +17,47 @@ class User {
     id = const Uuid().v4();
   }
 
-  void validateName(String name) {}
+  bool validateName(String name) {
+    if (name.length < 4) {
+      return false;
+    }
+    return true;
+  }
 
-  void validateEmail(String email) {}
+  bool validateEmail(String email) {
+    if (email.length < 8) {
+      return false;
+    } else if (!email.contains('@')) {
+      return false;
+    } else if (!email.contains(".com")) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
-  void validatePassword(String password) {}
+  bool validatePassword(String password) {
+    if (password.length < 6) {
+      return false;
+    }
+    return true;
+  }
 
-  void validatePhone(String num) {}
+  bool validatePhone(String num) {
+    if (num.length < 11) {
+      return false;
+    }
+    return true;
+  }
 
-  void validateCar(String num) {}
+  bool validateCar(String num) {
+    if (num.length < 6) {
+      return false;
+    }
+    return true;
+  }
+
+  bool validateLogin(String email, String password) {
+    return true;
+  }
 }

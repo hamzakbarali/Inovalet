@@ -4,8 +4,10 @@ import "../utils/utils_barrel.dart";
 
 class SubmitBtn extends StatelessWidget {
   late final Size size;
+  late final VoidCallback onPress;
 
-  SubmitBtn({required this.size, Key? key}) : super(key: key);
+  SubmitBtn({required this.size, required this.onPress, Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class SubmitBtn extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: () {},
+      onPressed: onPress,
       child: Text(
         "Submit",
         style: GoogleFonts.lora(

@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import '../../common_components/commoncomp_barrel.dart';
 import "../../utils/utils_barrel.dart";
+import "./widgets/ContactItem.dart";
 
 class ContacUsScreen extends StatelessWidget {
   const ContacUsScreen({Key? key}) : super(key: key);
@@ -51,110 +52,10 @@ class ContacUsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: size.width * 0.70,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 50,
-                          child: Icon(
-                            Icons.email,
-                            color: Colors.grey.shade200,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        Text(
-                          "inovalet@gmail.com",
-                          style: TextStyle(
-                            color: Colors.grey.shade200,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width * 0.70,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 50,
-                          child: Icon(
-                            Icons.phone,
-                            color: Colors.grey.shade200,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        Text(
-                          "+92 334 3451077",
-                          style: TextStyle(
-                            color: Colors.grey.shade200,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width * 0.70,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 50,
-                          child: Icon(
-                            Icons.web,
-                            color: Colors.grey.shade200,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        Text(
-                          "www.inovalet.com",
-                          style: TextStyle(
-                            color: Colors.grey.shade200,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width * 0.70,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 50,
-                          child: Icon(
-                            Icons.map_outlined,
-                            color: Colors.grey.shade200,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        Text(
-                          "DHA, Karachi",
-                          style: TextStyle(
-                            color: Colors.grey.shade200,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                  ContactItem(text: "inovalet@gmail.com", icon: Icons.email),
+                  ContactItem(text: "+92 334 3451077", icon: Icons.phone),
+                  ContactItem(text: "www.inovalet.com", icon: Icons.web),
+                  ContactItem(text: "DHA, Karachi", icon: Icons.map_outlined),
                 ],
               ),
             ),

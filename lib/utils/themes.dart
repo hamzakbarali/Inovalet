@@ -5,7 +5,6 @@ import "colors.dart";
 TextTheme splashscreenHeadingTextTheme = TextTheme(
   bodyText1: GoogleFonts.lobster(
     textStyle: const TextStyle(
-      color: Colors.blue,
       fontSize: 70,
       fontWeight: FontWeight.bold,
     ),
@@ -14,7 +13,6 @@ TextTheme splashscreenHeadingTextTheme = TextTheme(
 
 TextTheme defaultscreenHeadingTextTheme = TextTheme(
   bodyText1: GoogleFonts.lobster(
-    color: Colors.blue,
     fontWeight: FontWeight.bold,
   ),
 );
