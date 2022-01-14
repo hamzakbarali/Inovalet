@@ -27,7 +27,7 @@ class ContactItem extends StatelessWidget {
           style: GoogleFonts.lora(
             textStyle: TextStyle(
               color: Colors.grey.shade200,
-              fontSize: 19,
+              fontSize: 17,
               fontWeight: FontWeight.bold,
             ),
           ),

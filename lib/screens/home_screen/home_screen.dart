@@ -124,12 +124,17 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 80,
+                  height: 50,
                 ),
                 Center(
                   child: Column(
                     children: [
-                      ValetBtn(text: "Park your car?", onPress: () {}),
+                      ValetBtn(
+                          text: "Park your car?",
+                          onPress: () {
+                            Navigator.pushNamed(
+                                context, RouteGenerator.mapscreenRoute);
+                          }),
                       const SizedBox(
                         height: 15,
                       ),
