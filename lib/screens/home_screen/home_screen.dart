@@ -4,6 +4,9 @@ import "../../utils/utils_barrel.dart";
 import "../../data/data_barrel.dart";
 import "package:collection/collection.dart";
 import "package:google_fonts/google_fonts.dart";
+import "../../routes/routes.dart";
+import 'package:intl/intl.dart';
+import "./widgets/widgets_barrel.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,49 +18,126 @@ class HomeScreen extends StatelessWidget {
     final user = users.firstWhereOrNull((element) {
       return element.id == args;
     });
+    final date = DateFormat('EE, d MMM, yyyy');
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text(date.format(DateTime.now()), style: GoogleFonts.lobster()),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+        backgroundColor: brownColor,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              Navigator.pushReplacementNamed(
+                  context, RouteGenerator.loginscreenRoute);
+            },
+          ),
+        ],
+      ),
       body: SafeArea(
         child: SizedBox(
           height: size.height,
           width: size.width,
           child: Container(
             decoration: common_bg_image,
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CircleAvatar(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: brownColor),
-                          borderRadius: BorderRadius.circular(50)),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(50),
-                        child: Image.asset(
-                          "assets/abd.jpg",
-                          fit: BoxFit.cover,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: brownLightShade,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                          color: brown50,
+                          offset: const Offset(-5, -5),
+                          spreadRadius: 4,
+                          blurRadius: 15),
+                      BoxShadow(
+                          color: brown50,
+                          offset: const Offset(5, 5),
+                          spreadRadius: 4,
+                          blurRadius: 15),
+                    ],
+                  ),
+                  margin: const EdgeInsets.only(top: 25, left: 10, right: 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      CircleAvatar(
+                        child: Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: brownColor),
+                              borderRadius: BorderRadius.circular(50)),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(50),
+                            child: Image.asset(
+                              "assets/abd.jpg",
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        radius: 50,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        user!.name,
+                        style: GoogleFonts.lobster(
+                          textStyle: TextStyle(
+                            color: brownColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ),
-                    radius: 45,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    user!.name,
-                    style: GoogleFonts.lobster(
-                      textStyle: TextStyle(
-                        color: brownColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.directions_car,
+                            color: brownColor,
+                          ),
+                          Text(
+                            ": ${user.carNum}",
+                            style: GoogleFonts.lobster(
+                              textStyle: TextStyle(
+                                color: brownColor,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  height: 80,
+                ),
+                Center(
+                  child: Column(
+                    children: [
+                      ValetBtn(text: "Park your car?", onPress: () {}),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      ValetBtn(text: "Call Valet?", onPress: () {}),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ),

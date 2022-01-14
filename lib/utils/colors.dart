@@ -8,3 +8,5 @@ Color brownLightShade = const Color(0xFFe7dac7);
 Color pinkColor = const Color(0xFFefc8b1);
 Color grey300 = const Color(0xFFE0E0E0);
 Color maroon = const Color(0xFF993441);
+Color silver = const Color(0xFF9fafca);
+Color berry = const Color(0xFFc299d0);

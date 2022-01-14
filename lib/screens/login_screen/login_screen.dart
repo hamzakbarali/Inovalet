@@ -41,6 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
         iconTheme: const IconThemeData().copyWith(
           color: Colors.white,
         ),
+        centerTitle: true,
         backgroundColor: brownColor,
         title: Row(children: [
           Text("Login", style: commonAppBarTitleStyle),
