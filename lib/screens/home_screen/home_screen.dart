@@ -138,7 +138,12 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(
                         height: 15,
                       ),
-                      ValetBtn(text: "Call Valet?", onPress: () {}),
+                      ValetBtn(
+                          text: "Call Valet?",
+                          onPress: () {
+                            Navigator.pushNamed(context,
+                                RouteGenerator.callValetMapScreenRoute);
+                          }),
                     ],
                   ),
                 ),

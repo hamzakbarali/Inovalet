@@ -33,7 +33,7 @@ class _CallValetMapScreenState extends State<CallValetMapScreen> {
 
   void setMarkers() async {
     BitmapDescriptor icon = await BitmapDescriptor.fromAssetImage(
-        const ImageConfiguration(), "assets/car_icon.png");
+        const ImageConfiguration(), "assets/car_icon2.png");
     setState(() {
       _markers.add(Marker(
         position: _valetPos,
