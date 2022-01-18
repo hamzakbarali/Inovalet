@@ -9,7 +9,8 @@ class RouteGenerator {
   static const String defaultscreenRoute = "/default";
   static const String registrationscreenRoute = "/registration";
   static const String homescreenRoute = "/home";
-  static const String bookValetMapScreenRoute = "/map";
+  static const String bookValetMapScreenRoute = "/book-valet";
+  static const String callValetMapScreenRoute = "/call-valet";
 
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -34,6 +35,9 @@ class RouteGenerator {
       case bookValetMapScreenRoute:
         return MaterialPageRoute(
             builder: (_) => const BookValetMapScreen(), settings: settings);
+      case callValetMapScreenRoute:
+        return MaterialPageRoute(
+            builder: (_) => const CallValetMapScreen(), settings: settings);
       default:
         throw const FormatException("Invalid Route");
     }
