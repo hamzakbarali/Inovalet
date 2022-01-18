@@ -130,10 +130,10 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       ValetBtn(
-                          text: "Park your car?",
+                          text: "Book Valet?",
                           onPress: () {
-                            Navigator.pushNamed(
-                                context, RouteGenerator.mapscreenRoute);
+                            Navigator.pushNamed(context,
+                                RouteGenerator.bookValetMapScreenRoute);
                           }),
                       const SizedBox(
                         height: 15,

@@ -65,7 +65,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             width: screenSize.width,
             height: screenSize.height,
             child: Container(
-              decoration: signupscreen_bg_image,
+              decoration: common_bg_image,
               child: Center(
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 7),
