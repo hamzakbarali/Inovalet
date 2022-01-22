@@ -10,6 +10,10 @@ import "./widgets/widgets_barrel.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
+  static late String code = "";
+  static late String carNum = "";
+  static late bool gotCarNum = false;
+  static late bool gotCode = false;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +34,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () {
+              gotCarNum = false;
               Navigator.pushReplacementNamed(
                   context, RouteGenerator.loginscreenRoute);
             },
@@ -106,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                             color: brownColor,
                           ),
                           Text(
-                            ": ${user.carNum}",
+                            (gotCarNum) ? ":  $carNum" : ": ${user.carNum}",
                             style: GoogleFonts.lobster(
                               textStyle: TextStyle(
                                 color: brownColor,
@@ -132,6 +137,8 @@ class HomeScreen extends StatelessWidget {
                       ValetBtn(
                           text: "Book Valet?",
                           onPress: () {
+                            gotCode = false;
+                            gotCarNum = false;
                             Navigator.pushNamed(context,
                                 RouteGenerator.bookValetMapScreenRoute);
                           }),

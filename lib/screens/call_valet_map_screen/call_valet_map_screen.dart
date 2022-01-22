@@ -68,13 +68,7 @@ class _CallValetMapScreenState extends State<CallValetMapScreen> {
               textStyle: const TextStyle(),
             ),
           ),
-          actions: [
-            IconButton(
-                icon: const Icon(Icons.add),
-                onPressed: () {
-                  Navigator.pop(context);
-                }),
-          ]),
+          actions: []),
       body: SafeArea(
         child: GoogleMap(
           zoomGesturesEnabled: true,
