@@ -32,7 +32,6 @@ dependencies:
   shimmer_animation: ^2.1.0
   google_fonts: ^2.2.0
   animated_text_kit: ^4.2.1
-  # provider: ^6.0.2
   uuid: ^3.0.5
   intl: ^0.17.0
   google_maps_flutter: ^2.1.1
@@ -55,6 +54,9 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+flutter_native_splash:
+  color: "#42a5f5"
+  branding: "assets/logo.jpeg"
 
 # The following section is specific to Flutter.
 flutter:

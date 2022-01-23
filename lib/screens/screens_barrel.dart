@@ -6,3 +6,4 @@ export "./home_screen/home_screen.dart";
 export 'book_valet_map_screen/book_valet_map_screen.dart';
 export 'call_valet_map_screen/call_valet_map_screen.dart';
 export "./booking_info_screen/booking_info_screen.dart";
+export "./final_screen/final_screen.dart";

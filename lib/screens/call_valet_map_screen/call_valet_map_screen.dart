@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import "package:google_fonts/google_fonts.dart";
+import 'package:inovalet/routes/routes.dart';
 import "../../utils/utils_barrel.dart";
 import "package:location/location.dart";
 import "package:duration_picker/duration_picker.dart";
@@ -21,6 +22,7 @@ class _CallValetMapScreenState extends State<CallValetMapScreen> {
   late Set<Marker> _markers;
   late LatLng _pickedLoc;
   late Duration? _duration;
+  late bool shudBeVisible;
 
   @override
   void initState() {
@@ -30,8 +32,9 @@ class _CallValetMapScreenState extends State<CallValetMapScreen> {
         const CameraPosition(target: LatLng(24.8200, 67.0307), zoom: 18.2);
     _valetPos = const LatLng(24.820019, 67.030432);
     _markers = Set<Marker>();
-    _duration = null;
+    _duration = const Duration(minutes: 0);
     setMarkers();
+    shudBeVisible = false;
   }
 
   void setMarkers() async {
@@ -67,13 +70,19 @@ class _CallValetMapScreenState extends State<CallValetMapScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: brownColor,
         onPressed: () async {
-          _duration = await showDurationPicker(
+          var duration = await showDurationPicker(
             context: context,
-            initialTime: const Duration(minutes: 20),
+            initialTime: const Duration(minutes: 5),
             decoration: BoxDecoration(
                 color: grey300,
                 borderRadius: const BorderRadius.all(Radius.circular(20))),
           );
+          if (duration != null) {
+            setState(() {
+              _duration = duration;
+              shudBeVisible = true;
+            });
+          }
         },
         child: Icon(
           Icons.timer,
@@ -100,7 +109,23 @@ class _CallValetMapScreenState extends State<CallValetMapScreen> {
               initialCameraPosition: _camPos,
               myLocationEnabled: true,
             ),
-            const Positioned(child: Icon(Icons.add), top: 10, right: 10),
+            Positioned(
+                child: Visibility(
+                  visible: shudBeVisible,
+                  child: CircularCountDownTimer(
+                    width: 70,
+                    height: 70,
+                    duration: _duration!.inMinutes * 10,
+                    fillColor: brownColor,
+                    ringColor: pinkColor,
+                    onComplete: () {
+                      Navigator.pushNamed(
+                          context, RouteGenerator.finalscreenRoute);
+                    },
+                  ),
+                ),
+                top: 10,
+                right: 10),
           ],
         ),
       ),
