@@ -13,6 +13,9 @@ class RouteGenerator {
   static const String callValetMapScreenRoute = "/call-valet";
   static const String bookinginfoScreenRoute = "/booking-info";
   static const String finalscreenRoute = "/end";
+  static const String validationscreenRoute = "/validation";
+  static const String qrscannerscreenRoute = "/qr-scanner";
+  static const String paymentscreenRoute = "/payment";
 
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -46,6 +49,16 @@ class RouteGenerator {
       case finalscreenRoute:
         return MaterialPageRoute(
             builder: (_) => const FinalScreen(), settings: settings);
+      case validationscreenRoute:
+        return MaterialPageRoute(
+            builder: (_) => const ValidationScreen(), settings: settings);
+      case qrscannerscreenRoute:
+        return MaterialPageRoute(
+            builder: (_) => const QrScannerScreen(), settings: settings);
+      case paymentscreenRoute:
+        return MaterialPageRoute(
+            builder: (_) => const PaymentScreen(), settings: settings);
+
       default:
         throw const FormatException("Invalid Route");
     }

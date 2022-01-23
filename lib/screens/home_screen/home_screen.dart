@@ -8,13 +8,18 @@ import "../../routes/routes.dart";
 import 'package:intl/intl.dart';
 import "./widgets/widgets_barrel.dart";
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
   static late String code = "";
   static late String carNum = "";
   static late bool gotCarNum = false;
   static late bool gotCode = false;
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,7 +31,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(date.format(DateTime.now()), style: GoogleFonts.lobster()),
+        title: Text(date.format(DateTime.now()), style: GoogleFonts.lora()),
         centerTitle: true,
         automaticallyImplyLeading: false,
         backgroundColor: brownColor,
@@ -34,7 +39,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () {
-              gotCarNum = false;
+              HomeScreen.gotCarNum = false;
               Navigator.pushReplacementNamed(
                   context, RouteGenerator.loginscreenRoute);
             },
@@ -95,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Text(
                         user!.name,
-                        style: GoogleFonts.lobster(
+                        style: GoogleFonts.lora(
                           textStyle: TextStyle(
                             color: brownColor,
                             fontSize: 20,
@@ -111,8 +116,10 @@ class HomeScreen extends StatelessWidget {
                             color: brownColor,
                           ),
                           Text(
-                            (gotCarNum) ? ":  $carNum" : ": ${user.carNum}",
-                            style: GoogleFonts.lobster(
+                            (HomeScreen.gotCarNum)
+                                ? ":  ${HomeScreen.carNum}"
+                                : ": ${user.carNum}",
+                            style: GoogleFonts.lora(
                               textStyle: TextStyle(
                                 color: brownColor,
                                 fontSize: 20,
@@ -137,8 +144,8 @@ class HomeScreen extends StatelessWidget {
                       ValetBtn(
                           text: "Book Valet?",
                           onPress: () {
-                            gotCode = false;
-                            gotCarNum = false;
+                            HomeScreen.gotCode = false;
+                            HomeScreen.gotCarNum = false;
                             Navigator.pushNamed(context,
                                 RouteGenerator.bookValetMapScreenRoute);
                           }),

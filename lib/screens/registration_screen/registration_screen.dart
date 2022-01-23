@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "../../utils/utils_barrel.dart";
 import "../../common_components/commoncomp_barrel.dart";
 import "../../routes/routes.dart";
+import "package:google_fonts/google_fonts.dart";
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -52,7 +53,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         ),
         backgroundColor: brownColor,
         title: Row(children: [
-          Text("Signup", style: commonAppBarTitleStyle),
+          Text("Signup", style: GoogleFonts.lora()),
           const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: Icon(Icons.directions_car))

@@ -4,8 +4,8 @@ import "package:google_fonts/google_fonts.dart";
 import '../../screens/screens_barrel.dart';
 import "../../utils/utils_barrel.dart";
 import "package:location/location.dart";
-import "package:uuid/uuid.dart";
 import "../../routes/routes.dart";
+import "dart:math";
 
 class BookValetMapScreen extends StatefulWidget {
   const BookValetMapScreen({Key? key}) : super(key: key);
@@ -15,22 +15,51 @@ class BookValetMapScreen extends StatefulWidget {
 }
 
 class _BookValetMapScreenState extends State<BookValetMapScreen> {
-  late final Location _curLocation;
   late final CameraPosition _camPos;
   late final GoogleMapController _mapController;
   late LatLng _valetPos;
   late Set<Marker> _markers;
   late LatLng _pickedLoc;
+  late List<String> _alphabet;
 
   @override
   void initState() {
     super.initState();
-    _curLocation = Location();
+    _alphabet = [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "o",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "u",
+      "v",
+      "w",
+      "x",
+      "y",
+      "z",
+    ];
     _camPos =
         const CameraPosition(target: LatLng(24.8200, 67.0307), zoom: 18.2);
     _valetPos = const LatLng(24.820019, 67.030432);
     _markers = Set<Marker>();
-    HomeScreen.code = const Uuid().v4();
+    HomeScreen.code = _alphabet[Random().nextInt(26)] +
+        Random().nextInt(1000).toString() +
+        _alphabet[Random().nextInt(26)];
     HomeScreen.gotCode = true;
     setMarkers();
   }
@@ -106,7 +135,7 @@ class _BookValetMapScreenState extends State<BookValetMapScreen> {
           backgroundColor: brownColor,
           title: Text(
             "Book Valet",
-            style: GoogleFonts.lobster(
+            style: GoogleFonts.lora(
               textStyle: const TextStyle(),
             ),
           ),

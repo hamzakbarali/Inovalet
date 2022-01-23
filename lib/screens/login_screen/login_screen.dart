@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "../../utils/utils_barrel.dart";
 import "../../common_components/commoncomp_barrel.dart";
 import "../../routes/routes.dart";
+import "package:google_fonts/google_fonts.dart";
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -44,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
         centerTitle: true,
         backgroundColor: brownColor,
         title: Row(children: [
-          Text("Login", style: commonAppBarTitleStyle),
+          Text("Login", style: GoogleFonts.lora()),
           const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: Icon(Icons.directions_car))

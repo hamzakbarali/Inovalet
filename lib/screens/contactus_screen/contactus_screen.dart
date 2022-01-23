@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import '../../common_components/commoncomp_barrel.dart';
 import "../../utils/utils_barrel.dart";
 import "./widgets/ContactItem.dart";
+import "package:google_fonts/google_fonts.dart";
 
 class ContacUsScreen extends StatelessWidget {
   const ContacUsScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class ContacUsScreen extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: brownColor,
-        title: Text("Contact Us", style: commonAppBarTitleStyle),
+        title: Text("Contact Us", style: GoogleFonts.lora()),
         actions: const [],
       ),
       body: SafeArea(

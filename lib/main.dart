@@ -1,10 +1,19 @@
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 import "./routes/routes.dart";
+import 'package:camera/camera.dart';
 
-void main() {
+// late List<CameraDescription> cameras;
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  // try {
+  //   cameras = await availableCameras();
+  // } on CameraException catch (e) {
+  //   FormatException(e.code, e.description);
+  // }
+
   runApp(Inovalet());
 }
 

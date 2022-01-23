@@ -12,8 +12,11 @@ class ValetBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       child: Text(text,
-          style: GoogleFonts.lobster(
-              textStyle: TextStyle(fontSize: 25, color: brownColor))),
+          style: GoogleFonts.lora(
+              textStyle: TextStyle(
+                  fontSize: 25,
+                  color: brownColor,
+                  fontWeight: FontWeight.w800))),
       onPressed: onPress,
     );
   }

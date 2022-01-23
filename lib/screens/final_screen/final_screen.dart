@@ -18,16 +18,15 @@ class FinalScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            icon: const Icon(Icons.done),
+            icon: const Icon(Icons.payment),
             onPressed: () {
-              Navigator.popUntil(
-                  context, ModalRoute.withName(RouteGenerator.homescreenRoute));
+              Navigator.pushNamed(context, RouteGenerator.paymentscreenRoute);
             },
           ),
         ],
         title: Text(
           "Inovalet",
-          style: GoogleFonts.lobster(
+          style: GoogleFonts.lora(
             textStyle: const TextStyle(),
           ),
         ),
@@ -43,29 +42,34 @@ class FinalScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Center(
-                  child: Text(
-                    "Your validation code is: ",
-                    style: GoogleFonts.lobster(
-                      textStyle: TextStyle(
-                        fontSize: 25,
-                        color: brownColor,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Center(
-                  child: Text(
-                    HomeScreen.code,
-                    style: GoogleFonts.lora(
-                      textStyle: TextStyle(
-                        fontSize: 17,
-                        color: brownShade,
-                        fontWeight: FontWeight.w900,
-                      ),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Your ",
+                          style: GoogleFonts.lora(
+                            textStyle: TextStyle(
+                              fontSize: 22,
+                              color: brownColor,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                        ),
+                        WidgetSpan(
+                          child: Icon(Icons.directions_car,
+                              color: brownShade, size: 35),
+                        ),
+                        TextSpan(
+                          text: " Is Waiting For You",
+                          style: GoogleFonts.lora(
+                            textStyle: TextStyle(
+                              fontSize: 22,
+                              color: brownColor,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

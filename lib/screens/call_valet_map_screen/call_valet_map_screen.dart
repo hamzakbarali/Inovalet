@@ -94,7 +94,7 @@ class _CallValetMapScreenState extends State<CallValetMapScreen> {
         backgroundColor: brownColor,
         title: Text(
           "Calling Valet",
-          style: GoogleFonts.lobster(
+          style: GoogleFonts.lora(
             textStyle: const TextStyle(),
           ),
         ),

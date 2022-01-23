@@ -3,6 +3,7 @@ import "../../utils/utils_barrel.dart";
 import "../../common_components/commoncomp_barrel.dart";
 import "../../routes/routes.dart";
 import "../../screens/screens_barrel.dart";
+import "package:google_fonts/google_fonts.dart";
 
 class BookingInfoScreen extends StatefulWidget {
   const BookingInfoScreen({Key? key}) : super(key: key);
@@ -43,8 +44,7 @@ class _BookingInfoScreenState extends State<BookingInfoScreen> {
           color: Colors.white,
         ),
         backgroundColor: brownColor,
-        title:
-            Text("Enter Your Booking Details", style: commonAppBarTitleStyle),
+        title: Text("Enter Booking Details", style: GoogleFonts.lora()),
         actions: const [],
       ),
       body: SafeArea(
@@ -107,10 +107,8 @@ class _BookingInfoScreenState extends State<BookingInfoScreen> {
                               onPress: () {
                                 HomeScreen.carNum = _carnumController.text;
                                 HomeScreen.gotCarNum = true;
-                                Navigator.popUntil(
-                                    context,
-                                    ModalRoute.withName(
-                                        RouteGenerator.homescreenRoute));
+                                Navigator.pushNamed(context,
+                                    RouteGenerator.validationscreenRoute);
                               }),
                         ),
                       ],
